@@ -1,0 +1,181 @@
+body{
+    background: skyblue;
+    text-align: center;
+    margin: 0px;
+    font-family: serif;
+}
+.green{
+    background: rgba(0, 255, 157, 0.384);
+}
+.grid-container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 15fr 1fr;
+    grid-template-rows:25% 1fr 5%  ;
+    grid-template-areas: 
+    "header   login"
+    "content1 sidebar"
+    "footer   footer";
+}
+
+
+header{
+    grid-area: header;
+    padding-top: 10px;
+    background: linear-gradient(green,yellow);
+    overflow: hidden;
+    display: flex;
+    direction: column;
+    justify-content: center;
+}
+.log{
+    grid-area: login;
+    background: linear-gradient(green,yellow);
+    padding-top: 10px;
+
+}
+.poziom{
+    font-size: small;
+    padding: 1px;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+fieldset{
+    font-size: small;
+    margin-bottom: 5px;
+}
+main{
+    grid-area: content1;
+    /* margin-top: 50px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* justify-items: stretch; */
+    row-gap: 20px;
+}
+aside{
+    grid-area: sidebar;
+    background: linear-gradient(to right, skyblue,blue);
+    display: flex;
+    flex-direction: column;
+    /* row-gap: ; */
+    /* align-items: center; */
+    justify-content: space-around;
+    align-items: center;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* justify-items: stretch; */
+    align-items: center;
+    row-gap: 10px;
+}
+table, th, td, tr {
+    background: goldenrod;
+    border-radius: 5px;
+    padding-top :5px;
+    /* padding-bottom :5px; */
+    margin-top: 15px;
+}
+.newEagle{
+    margin-top: 5px;
+}
+#tytul{
+margin-top: 0px;
+}
+#nr1 , #nr2{
+    width: 60px;
+    height: 30px;
+    background: rgb(203, 228, 229);
+    border: solid aqua 3px;
+    border-radius: 20px;
+    /* margin: auto; */
+    padding: 5px;
+}
+#twojWynik{
+    /* margin: 10px; */
+    width: 120px;
+    border-radius: 20px;
+    font-size: larger;
+}
+.znak{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+input,button{
+    border-radius: 5px;
+    border: aqua;
+    font-size: large;
+}
+button{
+    background: lime;
+    padding: 15px;
+}
+.Bonus{
+    animation-duration: 5s;
+    animation-name: slid;
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+@keyframes slid {
+    from{
+        margin-left: 100%;
+        width: 300%;
+    }
+    to{
+        margin-left: 0%;
+        width: 100%;
+    }
+    
+}
+#wynik{
+   
+    color: darkblue;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#footer{
+    display: flex;
+    flex-direction: row;
+    align-content:flex-start;
+}
+.minus ,.plus{
+    width: 30px;
+    height: 30px;
+    background: rgb(203, 228, 229);
+    border: solid aqua;
+    border-radius: 5px;
+    font-size: x-large;
+    font-weight: bolder;
+}
+a:link{
+    text-decoration: none;
+}
+.plus:hover{
+    border:solid  blueviolet;
+    text-size-adjust: xx-large;
+}
+.minus:hover{
+    border:solid  blueviolet;
+    text-size-adjust: xx-large;
+}
+footer {
+    grid-area: footer;
+    background: gray;
+    font-size: xx-small;
+}
+.iconText{
+    font-size: xx-small;
+}
+button.coffee{
+    background: rgb(203, 228, 229);
+    border: solid aqua;
+}
+.alert{
+    background: gold;
+}
+
