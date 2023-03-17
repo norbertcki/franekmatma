@@ -1,0 +1,119 @@
+body{
+    background: skyblue;
+    text-align: center;
+    margin: 0px;
+    font-family: serif;
+}
+.green{
+    background: rgba(0, 255, 157, 0.384);
+}
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 15fr 1fr;
+    grid-template-rows:25% 1fr   ;
+    grid-template-areas: 
+    "header   login"
+    "content sidebar";
+}
+header{
+    grid-area: header;
+    background: linear-gradient(green,yellow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-end
+}
+
+.log{
+    grid-area: login;
+    background: linear-gradient(green,yellow);
+    padding-top: 10px;
+}
+h1{
+    font-style: italic;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+main{
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+main *{
+    border-radius: 5px ;
+    border: solid aqua 3px;
+    font-size: larger;
+}
+main #powitanie,.znikaj{
+    border: none;
+}
+#nr1 , #nr2{
+    width: 60px;
+    height: 30px;
+    background: rgb(203, 228, 229);
+    padding: 5px;
+}
+#twojWynik{
+    width: 120px;
+}
+.znak{
+    font-weight: bolder;
+    border: none;
+}
+button{
+    background: lime;
+    padding: 15px;
+}
+aside{
+    grid-area: sidebar;
+    background: linear-gradient(to right, skyblue,blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.win{
+    background-color: lightgreen;
+}
+.lose{
+    background-color: lightcoral;
+}
+.final{
+    background-color: blueviolet;
+    background-image: url('nijago.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.star{
+    width:30px;
+}
+.anima{
+    animation-name: stretch;
+    animation-duration: 5.0s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+@keyframes stretch {
+    0% {
+        background-color: darkblue;
+        transform: scale(.5);
+        border-radius: 50%;
+    }
+
+    50% {
+        background-color: blue;
+        border-radius: 50%;
+
+    }
+    
+    100% {
+        background-color: lightblue ;
+        transform: scale(3.0);
+        border-radius: 50%;
+    }
+}
